@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recipe Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=ADLaM+Display&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1 id="head">AI Recipe Generator</h1>
+        </div>
+    </header>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <img src="images/27531_ST_TENDERLOINS_13-7442687e434e4c4c95609ff0262773a2.jpg" alt="Delicious Food" class="slider-image active">
+        <img src="images/6-Special-Eid-Dishes-for-a-Perfect-Eid-Dinner.jpg" alt="Healthy Meal" class="slider-image">
+        <img src="images/3rd.jpg" alt="Tasty Dish" class="slider-image">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <div class="container">
+        <main>
+            <div class="form-container">
+                <form id="recipe-generator-form">
+                    <input 
+                        type="text" 
+                        placeholder="Enter ingredients (e.g., chicken, rice, vegetables)" 
+                        required 
+                        autocomplete="off" 
+                        class="instructions" 
+                        id="user-instructions"
+                    />
+                    <button type="submit" class="submit-button">Generate Recipes</button>
+                </form>
+                <div class="hint">Type ingredients and get unique recipe options instantly!</div>
+            </div>
+            
+            <!-- Recipe Selection -->
+            <div class="recipe-selection hidden" id="recipe-selection">
+                <p>Choose one of the recipes below to view details:</p>
+                <ul id="recipe-list"></ul>
+            </div>
+
+            <!-- Recipe Details -->
+            <div class="recipe hidden" id="recipe"></div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI Recipe Generator. All rights reserved.</p>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
